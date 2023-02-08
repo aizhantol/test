@@ -66,9 +66,6 @@ export default {
       });
   },
   methods: {
-    onIndicator(val) {
-      this.data = val;
-    },
     filter(val) {
       if (val === "выполненные") {
         this.items = this.oldItems.filter(e => e.completed);
@@ -95,7 +92,7 @@ export default {
     },
     removeAll() {
       this.items = this.items.filter(e => !e.checked);
-      // this.$forceUpdate();
+      this.oldItems = this.oldItems.filter(e => !e.checked);
     },
     save() {
       if (!this.data.id) {
