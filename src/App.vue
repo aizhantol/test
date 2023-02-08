@@ -101,7 +101,7 @@ export default {
       if (!this.data.id) {
         this.data.checked = false;
         this.data.completed = false;
-        this.data.id = this.items.length + 1;
+        this.data.id = this.oldItems.length + 1;
         this.items.push(this.data);
         this.oldItems.push(this.data);
       }
